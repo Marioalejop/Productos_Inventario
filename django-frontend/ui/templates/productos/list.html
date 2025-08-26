@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><title>Productos</title></head>
+<body>
+  <h1>Listado de productos</h1>
+  <ul>
+    {% for p in productos %}
+      <li>
+        <a href="{% url 'product_detail' p.id %}">{{ p.nombre }}</a> - ${{ p.precio }}
+      </li>
+    {% empty %}
+      <li>No hay productos.</li>
+    {% endfor %}
+  </ul>
+  <p><a href="{% url 'product_create' %}">Crear producto</a> | <a href="{% url 'home' %}">Inicio</a></p>
+</body>
+</html>
