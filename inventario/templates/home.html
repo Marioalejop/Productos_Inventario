@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Inicio | Inventario{% endblock %}
+
+{% block content %}
+<div class="mt-4">
+    <h1>Bienvenido al sistema de Inventario</h1>
+    <p>Usa la barra lateral para navegar por los módulos.</p>
+    <!-- Ejemplo de botón para volver al inicio (opcional) -->
+    <a href="{% url 'home' %}" class="btn btn-secondary mt-2">Ir al inicio</a>
+</div>
+{% endblock %}
