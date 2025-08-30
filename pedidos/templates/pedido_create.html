@@ -1,0 +1,11 @@
+<h2>Crear Pedido</h2>
+<form method="post">
+  {% csrf_token %}
+  <label>Cliente ID:</label>
+  <input type="text" name="clienteId" required><br><br>
+  
+  <label>Productos (IDs separados por coma):</label>
+  <input type="text" name="productos" placeholder="1,2,3"><br><br>
+
+  <button type="submit">Guardar</button>
+</form>

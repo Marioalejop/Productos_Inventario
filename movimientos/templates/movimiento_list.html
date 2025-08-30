@@ -1,0 +1,12 @@
+<h2>Movimientos de Inventario</h2>
+<a href="{% url 'movimientos:movimiento_entrada' %}">Registrar Entrada</a> |
+<a href="{% url 'movimientos:movimiento_salida' %}">Registrar Salida</a>
+<ul>
+  {% for mov in movimientos %}
+    <li>
+      Producto: {{ mov.productoId }} | Cantidad: {{ mov.cantidad }} | Tipo: {{ mov.tipo }}
+    </li>
+  {% empty %}
+    <li>No hay movimientos registrados</li>
+  {% endfor %}
+</ul>

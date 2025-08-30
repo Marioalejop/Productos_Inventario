@@ -1,0 +1,12 @@
+<h2>Lista de Pedidos</h2>
+<a href="{% url 'pedidos:pedido_create' %}">Nuevo Pedido</a>
+<ul>
+  {% for pedido in pedidos %}
+    <li>
+      Pedido #{{ pedido.id }} - Cliente: {{ pedido.clienteId }}
+      <a href="{% url 'pedidos:pedido_detail' pedido.id %}">Ver detalle</a>
+    </li>
+  {% empty %}
+    <li>No hay pedidos</li>
+  {% endfor %}
+</ul>

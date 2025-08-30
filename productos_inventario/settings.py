@@ -38,6 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'inventario',
+    'productos',
+    'clientes',
+    'pedidos',
+    'movimientos',
 ]
 
 MIDDLEWARE = [
@@ -55,10 +59,11 @@ ROOT_URLCONF = 'productos_inventario.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
+        'DIRS': [ BASE_DIR / 'templates' ],   # <-- aquí ponemos la carpeta global
+        'APP_DIRS': True,                     # <-- busca también templates en cada app
         'OPTIONS': {
             'context_processors': [
+                'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',

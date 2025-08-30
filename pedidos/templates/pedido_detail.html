@@ -1,0 +1,4 @@
+<h2>Detalle Pedido #{{ pedido.id }}</h2>
+<p>Cliente ID: {{ pedido.clienteId }}</p>
+<p>Productos: {{ pedido.productos }}</p>
+<a href="{% url 'pedidos:pedido_list' %}">Volver</a>
